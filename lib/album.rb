@@ -1,4 +1,3 @@
-
 class Album
   attr_reader :id, :name
   attr_accessor :name
@@ -40,5 +39,9 @@ class Album
   def delete()
     @@albums.delete(self.id)
   end
+
+  def songs
+  Song.find_by_album(self.id)
+end
 
 end
